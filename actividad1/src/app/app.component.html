@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario en Angular</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <div class="container">
@@ -12,13 +12,11 @@
     <form [formGroup]="profileForm">
       <label for="name">Nombre:</label>
       <input type="text" id="name" formControlName="name" placeholder="Ingresa tu nombre" />
-      <div *ngIf="profileForm.controls.name.invalid && profileForm.controls.name.touched">
         <small class="error">El nombre es obligatorio.</small>
       </div>
 
       <label for="email">Correo electrónico:</label>
       <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo electrónico" />
-      <div *ngIf="profileForm.controls.email.invalid && profileForm.controls.email.touched">
         <small class="error">Ingresa un correo válido.</small>
       </div>
 
